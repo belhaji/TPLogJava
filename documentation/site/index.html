@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>My Docs</title>
+        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href=".">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#home">Home</a></li>
+            <li><a href="#nom-du-projet">Nom du projet</a></li>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#auteur">Auteur</a></li>
+        <li class="main "><a href="#install">Install</a></li>
+            <li><a href="#a-partir-de-bindist">A partir de bindist</a></li>
+            <li><a href="#a-partir-de-src-dist">A partir de src dist</a></li>
+        <li class="main "><a href="#manuel-dutilisation">Manuel d'utilisation</a></li>
+        <li class="main "><a href="#manuel-technique">Manuel technique</a></li>
+            <li><a href="#fichier-de-logs">Fichier de logs</a></li>
+            <li><a href="#calculs-des-indicateurs">Calculs des indicateurs</a></li>
+        <li class="main "><a href="#classes">Classes</a></li>
+        <li class="main "><a href="#licence">Licence</a></li>
+        <li class="main "><a href="#dependances">Dépendances</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="home">Home</h1>
+<h2 id="nom-du-projet">Nom du projet</h2>
+<p>TP1Log</p>
+<h2 id="description">Description</h2>
+<p>Cette application a pour but d'établir des indicateurs de participation en ligne des apprenants inscrits à un cours à partir d'un fichier de logs "data.csv" d'une plateforme web d'apprentissage. Les indicateurs sont les suivants :</p>
+<ul>
+<li>Le nombre d'actions par apprenant sur une période donnée</li>
+<li>Le nombre moyen d'action par apprenant sur une période donnée</li>
+<li>La durée (approximative) d'utilisation de la plate-forme par apprenant sur une période</li>
+<li>La durée moyenne d'utilisation par apprenant sur une période
+ L'application  est réalisée sous la forme d'une interface graphique interactive conçue avec Java FX.</li>
+</ul>
+<h2 id="auteur">Auteur</h2>
+<p>Belhaji Adil</p>
+<h1 id="install">Install</h1>
+<h2 id="a-partir-de-bindist">A partir de bindist</h2>
+<p>On récupère le dossier bindist, et on lance l'application à partir du fichier exécutable nommé"app".</p>
+<h2 id="a-partir-de-src-dist">A partir de src dist</h2>
+<p>On ouvre "run configurations" à partir du projet, puis on lance l'application avec comme argument "maven package".</p>
+<h1 id="manuel-dutilisation">Manuel d'utilisation</h1>
+<p>Une fois que l'on a lancé l'application, une interface scene builder apparaît. Il faut d'abord choisir un fichier avec l'onglet "file", puis sélectionner le fichier "data.csv" (correspondant au fichier de logs) situé dans le dossier "target". Ensuite, il faut saisir une date de début de période "Start date" et une date de fin de période "End Date". Nous obtenons ainsi 4 graphiques : </p>
+<ul>
+<li>Le 1er graphique représente le nombre d'actions par apprenant sur la période donnée ;</li>
+<li>Le 2ème graphique représente le nombre moyen d'actions par apprenant sur la période donnée ; </li>
+<li>Le 3ème graphique représente la durée d'utilisation de la plateforme par apprenant sur la période donnée ; </li>
+<li>Le 4ème graphique représente la durée moyenne d'utilisation par apprenant sur la période donnée.</li>
+</ul>
+<p>Exemple :
+ On entre comme période : du 19/02/2017 au 28/02/2017
+ On obtient les résultats suivants :</p>
+<p><img alt="graphique1" src="img/graphique1.png" />
+ <img alt="graphique2" src="img/graphique2.png" />
+ <img alt="graphique3" src="img/graphique3.png" />
+ <img alt="graphique4" src="img/graphique4.png" /></p>
+<h1 id="manuel-technique">Manuel technique</h1>
+<h2 id="fichier-de-logs">Fichier de logs</h2>
+<p>Le fichier de logs est au format csv. Chaque ligne correspond à une action sur la plate-forme. 
+Les champs se présentent comme suit :
+ - Le 1er correspond à l'Id : identificateur de l'apprenant
+ - Le 2ème correspond à la date : timestamp de l'action au format : dd MMM yy, HH:mm</p>
+<h2 id="calculs-des-indicateurs">Calculs des indicateurs</h2>
+<p>Chaque graphique représente les résultats pour chacun des apprenants. On va donc lire le fichier et regrouper les valeurs par utilisateur et par session.
+Le premier indicateur est calculé en additionnant les actions réalisées par l'apprenant sur la période donnée.
+Le deuxième indicateur est calculé en divisant le nombre total d'actions réalisées par l'apprenant sur le nombre total de sessions de cet apprenant sur la période donnée.
+Le troisième indicateur est calculé en calculant le nombre de jours écoulés entre la 1ère et la dernière action de l'utilisateur sur la période donnée.
+Le quatrième indicateur est calculé en divisant ce nombre par le nombre total de sessions de cet apprenant sur la période donnée.</p>
+<h1 id="classes">Classes</h1>
+<ul>
+<li><em>LogEntry</em> : représente une ligne du fichier de logs <ul>
+<li><em>id</em> : id de l'utilisateur dans le fichier de logs</li>
+<li><em>timestamp</em>: la date dans le fichier de logs</li>
+</ul>
+</li>
+<li><em>Action</em> : représente une action de l'utilisateur<ul>
+<li><em>actionDate</em>: la date de l'action</li>
+</ul>
+</li>
+<li><em>Session</em> : représente une session de l'utilisateur (par défault une durée de 30 mins)<ul>
+<li><em>id</em>: l'id de la session (nombre calculé à partir des actions)</li>
+<li><em>actions</em>: la liste des actions dans la session</li>
+<li><em>startDate</em>: la date de début de la session</li>
+<li><em>endDate</em>: la date de fin de la session</li>
+</ul>
+</li>
+<li>
+<p><em>User</em> : </p>
+<ul>
+<li><em>id</em>: l'id de l'utilisateur</li>
+<li><em>sessions</em>: la list des sessions </li>
+</ul>
+</li>
+<li>
+<p><em>MainUIController</em> : représente le controlleur de l'interface graphique. Le fichier main est le point d'entrée de l'application.</p>
+</li>
+</ul>
+<h1 id="licence">Licence</h1>
+<p>Cette application appartient à la licence MIT.</p>
+<h1 id="dependances">Dépendances</h1>
+<p>Java 1.8</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-01-30 22:04:24
+-->
